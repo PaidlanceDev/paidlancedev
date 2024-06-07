@@ -3,8 +3,10 @@
   justify-content: center;
 
   mat-card {
+    background-color: #f5fbff;
     width: 24vw;
     padding: 1rem 2rem;
+    margin-bottom: 2rem;
 
     mat-card-header {
       display: flex;
@@ -26,6 +28,8 @@
         margin: 1rem 0 1.5rem;
 
         button {
+          justify-content: center;
+          align-items: center;
           background-color: #e0e0ff;
           font-size: 1.1rem;
           font-weight: 400;
@@ -36,6 +40,15 @@
             background-color: transparent;
             margin: 0 1rem;
           }
+
+          img {
+            width: 1.5rem;
+            margin-right: 0.5rem;
+
+            &.google {
+              transform: scale(1.4);
+            }
+          }
         }
       }
 
@@ -44,7 +57,7 @@
         margin-bottom: 1.5rem;
 
         &::after {
-          background-color: #fdfbff;
+          background-color: #f5fbff;
           content: 'OR';
           position: absolute;
           top: -0.7rem;
@@ -89,10 +102,15 @@
       display: flex;
       flex-direction: column;
       padding: 0;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
 
       button {
         margin: 0 0 1rem;
+
+        &:not([disabled]) {
+          background-color: #e0e0ff;
+          color: #fff;
+        }
       }
 
       p {

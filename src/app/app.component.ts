@@ -17,7 +17,10 @@ export class AppComponent {
 
   constructor(private iconRegistry: MatIconRegistry,
 		private sanitizer: DomSanitizer) {
-      this.iconRegistry.addSvgIcon("github", this.sanitizer.bypassSecurityTrustResourceUrl("https://paidlancer.dev/icons/github.svg"));
-      this.iconRegistry.addSvgIcon("google", this.sanitizer.bypassSecurityTrustResourceUrl("https://paidlancer.dev/icons/google.svg"));
+      this.iconRegistry.addSvgIcon("github", this.sanitizer.bypassSecurityTrustResourceUrl("/icons/github.svg"));
+      this.iconRegistry.addSvgIcon("google", this.sanitizer.bypassSecurityTrustResourceUrl("/icons/google.svg"));
     }
 }
+
+
+
