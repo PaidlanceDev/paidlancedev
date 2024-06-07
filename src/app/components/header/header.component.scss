@@ -7,23 +7,29 @@
   box-shadow: 0 2px 4px 0 #0000001a;
 
   .toolbar-row-start {
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-left: 1rem;
 
     .logo {
-      height: 2.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       img {
-        width: 10rem;
+        width: 12rem;
       }
     }
 
     nav {
       a {
         color: #fff;
-        font-size: 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        font-style: italic;
+        letter-spacing: 0.1rem;
         margin: 0 0.5rem;
       }
     }
@@ -68,9 +74,10 @@
   }
 
   .toolbar-row-end {
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     margin-right: 1rem;
 
     .auth {

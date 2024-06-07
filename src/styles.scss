@@ -30,6 +30,16 @@ body {
     font-family: "Lato", sans-serif;
     font-size: 1rem;
   }
+
+  mat-label{
+    font-family: "Lato", sans-serif;
+  }
+
+  .mdc-button__label {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+  }
+
 }
 
 .header {
@@ -52,9 +62,6 @@ mat-radio-button {
   }
 }
 
-mat-form-field {
-  border-radius: 1rem !important;
-}
 
 .mdc-radio {
   align-self: flex-end;
