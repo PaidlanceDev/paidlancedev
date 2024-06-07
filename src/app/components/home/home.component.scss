@@ -1,6 +1,14 @@
 .home {
   color: #333;
 
+  h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    margin: 0 0 0.7rem;
+  }
+
   h3 {
     font-size: 1.2rem;
     font-family: "Lato", sans-serif;
@@ -16,16 +24,17 @@
 
   .heading {
     position: relative;
+
     .cover {
       background-image: url('/branding/cover.png');
       width: 100vw;
-      height: 45vh;
+      height: 43vh;
       overflow: hidden;
       object-fit: cover;
       background-repeat: no-repeat;
       background-position: 50% 87%;
       background-size: cover;
-      opacity: 0.8;
+      opacity: 0.5;
     }
 
     .welcome {
@@ -40,10 +49,10 @@
       justify-content: center;
       text-align: center;
       background-color: #00000082;
-      padding: 0.7rem 2rem 0;
+      padding: 0.7rem 2rem 2rem;
 
       img {
-        width: 30rem;
+        width: 32rem;
       }
 
       h3 {
