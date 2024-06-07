@@ -1,0 +1,140 @@
+.home {
+  color: #333;
+
+  h3 {
+    font-size: 1.2rem;
+    font-family: "Lato", sans-serif;
+    margin: 0 0 0.7rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: "Lato", sans-serif;
+    margin: 0 0 0.7rem;
+  }
+
+  .heading {
+    position: relative;
+    .cover {
+      background-image: url('/branding/cover.png');
+      width: 100vw;
+      height: 45vh;
+      overflow: hidden;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 87%;
+      background-size: cover;
+      opacity: 0.8;
+    }
+
+    .welcome {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-color: #00000082;
+      padding: 0.7rem 2rem 0;
+
+      img {
+        width: 30rem;
+      }
+
+      h3 {
+        color: #fff;
+      }
+    }
+  }
+
+  .headline {
+    background-color: #eef5f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem 0 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px #0000001a;
+
+    h1 {
+      color: #7cbfb8;
+      font-size: 2rem;
+      line-height: 3rem;
+      font-weight: 600;
+      width: 60vw;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem 0;
+    text-align: center;
+
+    h3 {
+      width: 53vw;
+      text-align: left;
+    }
+
+    span {
+      color: #7cbfb8;
+      font-weight: bold;
+    }
+  }
+
+  .sections {
+    background-color: #eef5f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 1px 2px #0000001a;
+
+    section {
+      width: 30%;
+      padding: 0 2rem;
+
+      h3 {
+        color: #7cbfb8;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .join-message {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h3 {
+      font-size: 1.3rem;
+      color: #7cbfb8;
+      font-weight: bold;
+    }
+  }
+
+  mat-card {
+    background-color: #f1fcf4;
+    width: 60rem;
+    padding: 1rem 1.5rem;
+    margin: 2rem auto;
+
+    h3 {
+      font-style: italic;
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

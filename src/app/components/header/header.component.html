@@ -1,0 +1,35 @@
+<mat-toolbar class="header">
+  <div class="toolbar-row-start">
+    <a class="logo" routerLink="/" routerLinkActive="active">
+      <img src="branding/paidlancer-logo-long.png" alt="">
+    </a>
+    <nav>
+      <a routerLink="talents">Talents</a>
+      <a routerLink="about">Learn More</a>
+    </nav>
+  </div>
+
+  <div class="search">
+    <form>
+      <mat-form-field appearance="outline">
+        <mat-label>Search</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput type="search">
+        <button matSuffix mat-button class="trigger"[matMenuTriggerFor]="menu" (click)="handleClick($event)"> {{selectedItem ||
+          'Select'}}</button>
+      </mat-form-field>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="select('Talents')">Talents</button>
+        <button mat-menu-item (click)="select('Jobs')">Jobs</button>
+        <button mat-menu-item (click)="select('Projects')">Projects</button>
+      </mat-menu>
+    </form>
+  </div>
+
+  <div class="toolbar-row-end">
+    <div class="auth">
+      <a mat-mini-fab routerLink="" routerLinkActive="active"><mat-icon>login</mat-icon></a>
+    </div>
+  </div>
+
+</mat-toolbar>

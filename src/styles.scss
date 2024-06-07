@@ -1,0 +1,92 @@
+@use '@angular/material' as mat;
+
+$theme: mat.define-theme((color: (theme-type: light,
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      )));
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@include mat.core();
+@include mat.color-variants-backwards-compatibility($theme);
+
+html {
+  height: 100%;
+}
+
+body {
+  @include mat.all-component-themes($theme);
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+
+  a {
+    font-family: "Lato", sans-serif;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  p {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+  }
+}
+
+.header {
+  .mat-mdc-form-field-subscript-wrapper {
+    display: none;
+  }
+}
+
+mat-radio-button {
+  width: 100%;
+}
+
+.mdc-form-field {
+  width: 100%;
+  align-items: flex-start !important;
+  flex-direction: column-reverse !important;
+
+  label {
+    cursor: pointer;
+  }
+}
+
+mat-form-field {
+  border-radius: 1rem !important;
+}
+
+.mdc-radio {
+  align-self: flex-end;
+}
+
+.mdc-radio__outer-circle {
+  border-color: #33ad52 !important;
+}
+
+.mdc-radio__inner-circle {
+  border-color: #33ad52 !important;
+}
+
+app-login {
+  .mdc-button__label {
+    width: 85% !important;
+  }
+}
+
+.mdc-text-field--outlined {
+  --mdc-outlined-text-field-container-shape: 2rem !important;
+  --mdc-outlined-text-field-container: background-color: #fff !important;
+}
+
+.mat-mdc-text-field-wrapper {
+  background-color: #fff;
+  border-radius: 2rem !important;
+}
+
+.mat-mdc-form-field-icon-suffix {
+  button {
+    background-color: #e0e0ff;
+    border-radius: 2rem;
+  }
+}
