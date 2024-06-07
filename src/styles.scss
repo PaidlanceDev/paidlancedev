@@ -38,6 +38,7 @@ body {
   .mdc-button__label {
     font-family: "Lato", sans-serif;
     font-weight: 600;
+    color: #00006e;
   }
 
 }
@@ -45,6 +46,16 @@ body {
 .header {
   .mat-mdc-form-field-subscript-wrapper {
     display: none;
+  }
+
+  .mdc-text-field--outlined {
+    --mdc-outlined-text-field-container-shape: 2rem !important;
+    --mdc-outlined-text-field-container: background-color: #fff !important;
+  }
+
+  .mat-mdc-text-field-wrapper {
+    background-color: #fff;
+    border-radius: 2rem !important;
   }
 }
 
@@ -68,11 +79,11 @@ mat-radio-button {
 }
 
 .mdc-radio__outer-circle {
-  border-color: #33ad52 !important;
+  border-color: #7cbfb8 !important;
 }
 
 .mdc-radio__inner-circle {
-  border-color: #33ad52 !important;
+  border-color: #7cbfb8 !important;
 }
 
 app-login {
@@ -81,19 +92,11 @@ app-login {
   }
 }
 
-.mdc-text-field--outlined {
-  --mdc-outlined-text-field-container-shape: 2rem !important;
-  --mdc-outlined-text-field-container: background-color: #fff !important;
-}
-
-.mat-mdc-text-field-wrapper {
-  background-color: #fff;
-  border-radius: 2rem !important;
-}
 
 .mat-mdc-form-field-icon-suffix {
   button {
     background-color: #e0e0ff;
+    color: #00006e;
     border-radius: 2rem;
   }
 }

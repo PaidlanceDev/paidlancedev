@@ -1,0 +1,109 @@
+.login {
+  display: flex;
+  justify-content: center;
+
+  mat-card {
+    width: 24vw;
+    padding: 1rem 2rem;
+
+    mat-card-header {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.7rem;
+
+      mat-card-title {
+        font-family: "Lato", sans-serif;
+        font-weight: 600;
+        color: #7cbfb8;
+      }
+    }
+
+    mat-card-content {
+      .button-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0 1.5rem;
+
+        button {
+          background-color: #e0e0ff;
+          font-size: 1.1rem;
+          font-weight: 400;
+          width: 100%;
+          padding: 1.5rem 0;
+
+          mat-icon {
+            background-color: transparent;
+            margin: 0 1rem;
+          }
+        }
+      }
+
+      mat-divider {
+        position: relative;
+        margin-bottom: 1.5rem;
+
+        &::after {
+          background-color: #fdfbff;
+          content: 'OR';
+          position: absolute;
+          top: -0.7rem;
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 0 1rem;
+          font-weight: 500;
+        }
+      }
+
+      form {
+        position: relative;
+        margin-bottom: 0;
+
+        mat-form-field {
+          width: 100%;
+
+          &:last-child {
+            position: relative;
+            // margin-bottom: 0;
+
+            .mat-mdc-form-field-subscript-wrapper {
+              height: 2.3rem;
+            }
+          }
+        }
+
+        mat-error {
+          position: absolute;
+
+          &.custom {
+            position: absolute;
+            left: 1rem;
+            bottom: 1rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+
+    mat-card-actions {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin-bottom: 1rem;
+
+      button {
+        margin: 0 0 1rem;
+      }
+
+      p {
+        margin: 0.2rem;
+        font-size: 0.9rem;
+
+        span {
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
