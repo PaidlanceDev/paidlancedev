@@ -4,18 +4,11 @@
       <mat-card-title>Sign In</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <!-- MatIconRegistry mappings always look for icons in the /assets folder -->
-      <!-- <div class="button-wrapper">
+      <div class="button-wrapper">
         <button mat-raised-button class="social-sign-in" (click)="onGithubSignIn()"><mat-icon svgIcon="github"></mat-icon> Sign in with GitHub </button>
       </div>
       <div class="button-wrapper">
         <button mat-raised-button class="social-sign-in" (click)="onGoogleSignIn()"> <mat-icon svgIcon="google"></mat-icon> Sign in with Google </button>
-      </div> -->
-      <div class="button-wrapper">
-        <button mat-raised-button class="social-sign-in" (click)="onGithubSignIn()"><img src="/icons/github.svg" alt=""> Sign in with GitHub </button>
-      </div>
-      <div class="button-wrapper">
-        <button mat-raised-button class="social-sign-in" (click)="onGoogleSignIn()"><img class="google" src="/icons/google.svg" alt=""> Sign in with Google </button>
       </div>
       <mat-divider></mat-divider>
       <form [formGroup]="signupForm" #form="ngForm" class="signup">

@@ -1,0 +1,16 @@
+  <div class="fqa">
+    <h2>FQA</h2>
+    <mat-accordion>
+      @for (fqa of fqas; track fqa) {
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>{{fqa.question}}</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{fqa.answer}}</p>
+      </mat-expansion-panel>
+    }
+    </mat-accordion>
+  </div>
+

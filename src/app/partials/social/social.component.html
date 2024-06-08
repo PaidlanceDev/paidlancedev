@@ -1,1 +1,5 @@
-<p>social works!</p>
+@for (link of socialLinks; track link) {
+  <a href="{{link.url}}" target="_blank" rel="noopener noreferrer">
+    <mat-icon svgIcon="{{link.icon}}"></mat-icon>
+  </a>
+}

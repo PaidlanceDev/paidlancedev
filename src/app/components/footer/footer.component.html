@@ -1,8 +1,9 @@
 <div class="footer">
   <div class="links">
-    <!-- <a [routerLink]="['avoid-list']"><h3>Avoid List</h3></a> -->
-    <!-- <a [routerLink]="['fqa']"><h3>FQA</h3></a> -->
+    <a routerLink="fqa" routerLinkActive="active"><h3>FQA</h3></a>
+    <a routerLink="tos" routerLinkActive="active"><h3>TOS</h3></a>
+    <h3>|</h3>
+    <app-social></app-social>
   </div>
-  <app-social></app-social>
   <p>© {{year}} Paidlancer | All Rights Reserved</p>
 </div>
