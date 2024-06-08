@@ -43,6 +43,11 @@ body {
 
 }
 
+
+.gradient {
+  background: linear-gradient(#d5ece8, #f1fcf4 5%, #f1fcf4 95%, #d5ece8 100%);
+}
+
 .header {
   .mat-mdc-form-field-subscript-wrapper {
     display: none;
@@ -56,6 +61,14 @@ body {
   .mat-mdc-text-field-wrapper {
     background-color: #f5fbff;
     border-radius: 2rem !important;
+  }
+
+  .mat-mdc-form-field-icon-suffix {
+    button {
+      background-color: #e0e0ff;
+      color: #00006e;
+      border-radius: 2rem;
+    }
   }
 }
 
@@ -103,10 +116,4 @@ app-login {
 }
 
 
-.mat-mdc-form-field-icon-suffix {
-  button {
-    background-color: #e0e0ff;
-    color: #00006e;
-    border-radius: 2rem;
-  }
-}
+
