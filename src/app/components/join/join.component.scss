@@ -1,0 +1,120 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  min-height: 70vh;
+
+  h1 {
+    color: #36625d;
+    font-size: 1.8rem;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  mat-radio-group {
+    display: flex;
+    margin: 2rem 0;
+
+    mat-card {
+      background-color: #f1fcf4;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 22rem;
+      margin: 1rem;
+      padding: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 0.8rem 0.1rem #4176695c;
+
+      mat-icon {
+        position: absolute;
+        top: 1rem;
+        left: 40%;
+        color: #549a88;
+        font-size: 2.7rem;
+        height: 2.7rem;
+        width: 2.7rem;
+      }
+
+      mat-radio-button {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      h2 {
+        color: #2a8e43;
+        font-size: 1.5rem;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        margin-left: 0.5rem;
+      }
+
+      h3 {
+        color: #555;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-family: "Lato", sans-serif;
+        font-weight: bold;
+        margin: 0.5rem 1rem 1rem 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        font-family: "Lato", sans-serif;
+        padding-right: 4rem;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      background-color: #7cbfb8;
+      color: #fff !important;
+      font-size: 1.1rem;
+      height: 3rem;
+
+      &[disabled] {
+        background-color: #8cb9a8;
+        opacity: 0.5;
+      }
+    }
+
+    a {
+      margin: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin: 1.5rem 0;
+
+      a {
+        color: #549a88;
+        font-weight: 500;
+      }
+    }
+  }
+
+  mat-card {
+    &.signup {
+      width: 20vw;
+      min-height: 30vh;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+      }
+    }
+  }
+}

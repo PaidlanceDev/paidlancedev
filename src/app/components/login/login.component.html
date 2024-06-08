@@ -5,10 +5,12 @@
     </mat-card-header>
     <mat-card-content>
       <div class="button-wrapper">
-        <button mat-raised-button class="social-sign-in" (click)="onGithubSignIn()"><mat-icon svgIcon="github"></mat-icon> Sign in with GitHub </button>
+        <button mat-raised-button class="social-sign-in" (click)="onGithubSignIn()">
+          <mat-icon svgIcon="github"></mat-icon> Sign in with GitHub </button>
       </div>
       <div class="button-wrapper">
-        <button mat-raised-button class="social-sign-in" (click)="onGoogleSignIn()"> <mat-icon svgIcon="google"></mat-icon> Sign in with Google </button>
+        <button mat-raised-button class="social-sign-in" (click)="onGoogleSignIn()">
+          <mat-icon svgIcon="google"></mat-icon> Sign in with Google </button>
       </div>
       <mat-divider></mat-divider>
       <form [formGroup]="signupForm" #form="ngForm" class="signup">

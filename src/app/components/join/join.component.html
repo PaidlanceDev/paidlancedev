@@ -1,1 +1,83 @@
-<p>join works!</p>
+<div class="signup">
+  @if (!selectionMade && !paidlancerJoin && !clientJoin) {
+  <div class="choose">
+    <h1>Join as a paidlancer or a client:</h1>
+    <mat-radio-group aria-label="Select an option" labelPosition="before" [(ngModel)]="selection">
+      <mat-card>
+        <mat-radio-button value="paidlancer">
+          <mat-icon>laptop</mat-icon>
+          <h2>I want to be a Paidlancer</h2>
+          <h3>I am a freelancer looking for work and payment protection.</h3>
+        </mat-radio-button>
+      </mat-card>
+      <mat-card>
+        <mat-radio-button value="client">
+          <mat-icon>people</mat-icon>
+          <h2>I am a responsible Client</h2>
+          <h3>I am a client who recognizes that hiring entails payment.</h3>
+        </mat-radio-button>
+      </mat-card>
+    </mat-radio-group>
+
+    <div class="actions">
+      @if (selection === "paidlancer") {
+      <button mat-raised-button (click)="onTalentJoin()">Join as a {{selection}}</button>
+      } @else if (selection === "client") {
+      <button mat-raised-button (click)="onClientJoin()">Apply as a {{selection}}</button>
+      } @else {
+      <button mat-raised-button disabled>Create an account</button>
+      }
+      <p>Already have an account? <a [routerLink]="['/login']">Log In</a></p>
+    </div>
+  </div>
+  }
+  @if (selectionMade && paidlancerJoin) {
+  <mat-card class="signup">
+    <h3>Fill in your Paidlancer details</h3>
+    <form>
+      <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        @if (email.invalid) {
+        <mat-error>{{getErrorMessage()}}</mat-error>
+        }
+      </mat-form-field>
+      <div class="tos">
+        <label>
+          <input type="checkbox" required>
+          I accept the TOS
+        </label>
+
+      </div>
+    </form>
+  </mat-card>
+  <div class="actions">
+    <a mat-raised-button (click)="clearSelection()">Back</a>
+  </div>
+  } @else if (selectionMade && clientJoin) {
+  <mat-card class="signup">
+    <h3>Fill in your Client details</h3>
+    <form>
+      <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        @if (email.invalid) {
+        <mat-error>{{getErrorMessage()}}</mat-error>
+        }
+      </mat-form-field>
+      <div class="tos">
+        <label>
+          <input type="checkbox" required>
+          I accept the TOS
+        </label>
+
+      </div>
+    </form>
+  </mat-card>
+  <div class="actions">
+    <a mat-raised-button (click)="clearSelection()">Back</a>
+  </div>
+  }
+
+
+</div>

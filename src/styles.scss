@@ -10,6 +10,25 @@ $theme: mat.define-theme((color: (theme-type: light,
 @include mat.core();
 @include mat.color-variants-backwards-compatibility($theme);
 
+
+// Teal palette
+$teal-1: #36625d;
+$teal-2: #549a88;
+$teal-3: #7cbfb8;
+$teal-4: #d5ece8;
+$teal-5: #f5fbff;
+
+// Green palette
+$green-1: #2a8e43;
+$green-2: #417669;
+$green-3: #8cb9a8;
+$green-5: #f1fcf4;
+
+// Blue palette
+$blue-1: #00006e;
+$blue-2: #e0e0ff;
+$blue-3: #efefff;
+
 html {
   height: 100%;
 }
@@ -38,11 +57,10 @@ body {
   .mdc-button__label {
     font-family: "Lato", sans-serif;
     font-weight: 600;
-    color: #00006e;
+    // color: #00006e;
   }
 
 }
-
 
 .gradient {
   background: linear-gradient(#d5ece8, #f1fcf4 5%, #f1fcf4 95%, #d5ece8 100%);

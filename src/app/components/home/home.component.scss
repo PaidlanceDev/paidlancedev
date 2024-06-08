@@ -28,7 +28,7 @@
     .cover {
       background-image: url('/branding/cover.png');
       width: 100vw;
-      height: 43vh;
+      height: 47vh;
       overflow: hidden;
       object-fit: cover;
       background-repeat: no-repeat;
@@ -49,7 +49,7 @@
       justify-content: center;
       text-align: center;
       background-color: #00000082;
-      padding: 0.7rem 2rem 2rem;
+      padding: 1rem 2rem 2rem;
 
       img {
         width: 32rem;
@@ -57,6 +57,12 @@
 
       h2 {
         color: #fff;
+        margin-top: -1rem;
+      }
+
+      h3 {
+        color: #fff;
+        font-size: 1.3rem;
       }
     }
   }
@@ -167,13 +173,13 @@
         margin: 1rem 0;
 
         button {
-          background-color: #e0e0ff;
+          background-color: #8cb9a8;
           color: #fff;
           font-size: large;
           margin: 1rem 0;
 
           &.join {
-            background-color: #bfcbe0;
+            background-color: #7cbfb8;
           }
         }
 
