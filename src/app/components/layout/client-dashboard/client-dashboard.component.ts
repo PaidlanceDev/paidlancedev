@@ -1,6 +1,6 @@
 import { MediaMatcher } from "@angular/cdk/layout";
 import { ChangeDetectorRef, Component, OnDestroy } from "@angular/core";
-import { FooterComponent } from "../../layout/footer/footer.component";
+import { FooterComponent } from "../footer/footer.component";
 import { RouterLink, RouterOutlet } from "@angular/router";
 
 import { MatListModule } from "@angular/material/list";
@@ -31,8 +31,8 @@ export class ClientDashboardComponent implements OnDestroy {
 
 	navItems = [
     { name: "Projects", route: "/client" },
-    { name: "New Project", route: "/client/new" },
-    { name: "Matches", route: "/client/matches" },
+    { name: "New Project", route: "new" },
+    { name: "Matches", route: "matches" },
     { name: "All Talents", route: "/talent" },
     { name: "Settings", route: "settings" },
   ];

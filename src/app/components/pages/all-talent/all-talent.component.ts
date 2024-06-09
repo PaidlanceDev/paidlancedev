@@ -9,13 +9,13 @@ import { MatButtonModule } from "@angular/material/button";
 import {MatChipsModule} from '@angular/material/chips';
 
 @Component({
-	selector: "app-talents-list",
+	selector: "app-all-talent",
 	standalone: true,
 	imports: [RouterLink, MatCardModule, MatExpansionModule, MatButtonModule, MatChipsModule],
-	templateUrl: "./talents-list.component.html",
-	styleUrl: "./talents-list.component.scss",
+	templateUrl: "./all-talent.component.html",
+	styleUrl: "./all-talent.component.scss",
 })
-export class TalentsListComponent {
+export class AllTalentComponent {
   panelOpenState = true;
 	talents: Talent[] = [];
   fields: any[] = [];
