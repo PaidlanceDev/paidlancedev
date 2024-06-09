@@ -37,6 +37,6 @@ export class HeaderComponent {
 
   select(item: any) {
     this.selectedItem = item;
-    this.router.navigate([ this.selectedItem.toLowerCase()]);
+    this.router.navigate([this.selectedItem.toLowerCase()]);
   }
 }
