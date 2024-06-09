@@ -1,5 +1,5 @@
-import { Component } from "@angular/core";
-import { RouterLink } from "@angular/router";
+import { Component, inject } from "@angular/core";
+import { Router, RouterLink } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -29,6 +29,7 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class HeaderComponent {
 	selectedItem: any;
+  private router = inject(Router);
 
   handleClick($event: any) {
     $event.stopPropagation();
@@ -36,5 +37,6 @@ export class HeaderComponent {
 
   select(item: any) {
     this.selectedItem = item;
+    this.router.navigate([ this.selectedItem.toLowerCase()]);
   }
 }

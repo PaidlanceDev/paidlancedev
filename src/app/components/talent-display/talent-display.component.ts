@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, inject } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
 import { Talent } from "../../models/talent";
 import { TalentService } from "../../services/talent.service";
 
@@ -21,9 +20,6 @@ export class TalentDisplayComponent implements OnInit {
 
   talent!: Talent;
 	private talentService = inject(TalentService);
-	private route: ActivatedRoute = inject(ActivatedRoute);
-
-
 
   ngOnInit(): void {
     if (this.talentUsername) {
