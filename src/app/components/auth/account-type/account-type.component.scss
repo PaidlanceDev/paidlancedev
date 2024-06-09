@@ -118,3 +118,32 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .account-type {
+    padding: 1rem;
+    min-height: 90vh;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    mat-radio-group {
+      flex-direction: column;
+
+      mat-card {
+        width: 70vw;
+        margin: 1rem 0;
+      }
+    }
+
+    mat-card {
+      padding: 1rem;
+      &.signup {
+        width: 60vw;
+        min-height: 30vh;
+
+      }
+    }
+  }
+}

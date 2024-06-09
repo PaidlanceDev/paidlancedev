@@ -34,3 +34,10 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    position: relative;
+    z-index: 2;
+  }
+}

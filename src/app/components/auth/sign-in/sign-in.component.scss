@@ -123,3 +123,11 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .signin {
+    mat-card {
+      width: 80vw;
+    }
+  }
+}

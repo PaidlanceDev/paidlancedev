@@ -52,20 +52,8 @@
   }
 }
 
-.description {
-  margin-top: 2rem;
-  width: 30vw;
-
-  h3 {
-    color: #333;
-    font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-    text-align: left;
-  }
-
-  span {
-    color: #549a88;
-    font-weight: bold;
+@media screen and (max-width: 768px) {
+  .fqa {
+    width: 80vw;
   }
 }

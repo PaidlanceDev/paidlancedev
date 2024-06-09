@@ -184,7 +184,82 @@
         }
 
         p {
-          margin:0;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    .heading {
+      .cover {
+        height: 40vh;
+      }
+
+      .welcome {
+        padding: 1rem 1rem 1rem;
+
+        img {
+          width: 25rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        h3 {
+          font-size: 1.05rem;
+          margin: 0.2rem;
+        }
+      }
+    }
+
+    .headline {
+      h1 {
+        font-size: 1.7rem;
+        line-height: 2.5rem;
+        width: 80vw;
+      }
+    }
+
+    .description {
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        width: 80vw;
+      }
+    }
+
+    .sections-wrapper {
+      flex-direction: column;
+
+      &.teal {
+        padding-top: 1.5rem;
+      }
+
+      section {
+        width: 80%;
+        padding: 0 1rem;
+
+        img {
+          margin: 1rem 0 1.5rem;
+        }
+      }
+    }
+
+    .join-message {
+      mat-card {
+        margin: 1rem;
+        width: 90vw;
+
+        h3 {
+          font-size: 1.3rem;
+          width: 60vw;
         }
       }
     }

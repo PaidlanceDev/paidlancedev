@@ -64,7 +64,7 @@
 
           h2 {
             text-transform: uppercase;
-            line-height: 1.5rem;
+            line-height: 1.7rem;
             margin: 0.3rem 0;
           }
 
@@ -100,6 +100,50 @@
           &:hover {
             background-color: #33ad52;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .talents {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    .side-filter {
+      display: none;
+    }
+
+    .cards-wrapper {
+      width: 80vw;
+
+      mat-card {
+        flex-direction: column;
+        width: 80vw;
+
+        mat-card-header {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 10rem;
+            margin-bottom: 0.5rem;
+          }
+        }
+
+
+        mat-card-content {
+          width: 90%;
+        }
+
+        mat-card-actions {
+          flex-direction: row;
+          margin-top: 1rem;
         }
       }
     }
