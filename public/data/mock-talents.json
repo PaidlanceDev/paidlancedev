@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "firstName": "John",
+    "lastName": "Doe",
+    "username": "johndoe",
+    "email": "john@example.com",
+    "picture": "https://raw.githubusercontent.com/monacodelisa/images/main/users/daniel-davis.png",
+    "field": "Software Development",
+    "experience": "5 years",
+    "rate": "$50/hour",
+    "topSkills": [
+      {"skillName": "JavaScript"},
+      {"skillName": "React"},
+      {"skillName": "Node.js"}
+    ],
+    "location": {
+      "city": "New York",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "2",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "username": "janesmith",
+    "email": "jane@example.com",
+    "picture": "https://raw.githubusercontent.com/monacodelisa/images/main/users/emily-thorne.png",
+    "field": "Graphic Design",
+    "experience": "4 years",
+    "rate": "$40/hour",
+    "topSkills": [
+      {"skillName": "Adobe Photoshop"},
+      {"skillName": "Illustrator"},
+      {"skillName": "Typography"}
+    ],
+    "location": {
+      "city": "Los Angeles",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "3",
+    "firstName": "David",
+    "lastName": "Brown",
+    "username": "davidbrown",
+    "email": "david@example.com",
+    "picture": "https://raw.githubusercontent.com/monacodelisa/images/main/users/daniel-davis.png",
+    "field": "Data Analysis",
+    "experience": "6 years",
+    "rate": "$70/hour",
+    "topSkills": [
+      {"skillName": "Python"},
+      {"skillName": "Pandas"},
+      {"skillName": "Machine Learning"}
+    ],
+    "location": {
+      "city": "London",
+      "country": "UK"
+    }
+  },
+  {
+    "id": "4",
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "username": "sarahjohnson",
+    "email": "sarah@example.com",
+    "picture": "https://raw.githubusercontent.com/monacodelisa/images/main/users/emily-thorne.png",
+    "field": "Content Writing",
+    "experience": "1 year",
+    "rate": "$15/hour",
+    "topSkills": [
+      {"skillName": "SEO"},
+      {"skillName": "Copywriting"},
+      {"skillName": "Content Strategy"}
+    ],
+    "location": {
+      "city": "Sydney",
+      "country": "Australia"
+    }
+  },
+  {
+    "id": "5",
+    "firstName": "Michael",
+    "lastName": "Lee",
+    "username": "michaellee",
+    "email": "michael@example.com",
+    "picture": "https://raw.githubusercontent.com/monacodelisa/images/main/users/daniel-davis.png",
+    "field": "Mobile App Development",
+    "experience": "2 years",
+    "rate": "$20/hour",
+    "topSkills": [
+      {"skillName": "Swift"},
+      {"skillName": "iOS Development"},
+      {"skillName": "Firebase"}
+    ],
+    "location": {
+      "city": "Tokyo",
+      "country": "Japan"
+    }
+  }
+]

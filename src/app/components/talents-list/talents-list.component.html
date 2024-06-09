@@ -1,0 +1,37 @@
+<div class="talents">
+
+  <div class="cards-wrapper">
+    @for (talent of talents; track talent.id) {
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{talent.username}}</mat-card-title>
+        <mat-card-subtitle>{{talent.firstName}} {{talent.lastName}}</mat-card-subtitle>
+        <img mat-card-image src="{{talent.picture}}">
+      </mat-card-header>
+      <mat-card-content>
+        <div class="rate-experience">
+          <h2>{{talent.field}}</h2>
+          <h3>{{talent.experience}}</h3>
+          <h3>{{talent.rate}}</h3>
+
+        </div>
+        <div class="skills">
+          <p>Top Skills</p>
+          @for (skill of talent.topSkills; track skill) {
+          <ul>
+            <li>{{skill.skillName}}</li>
+          </ul>
+          }
+        </div>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-raised-button [routerLink]="['/talent', talent.username]">More</a>
+        <a mat-raised-button>Message</a>
+        <a mat-raised-button>Hire</a>
+      </mat-card-actions>
+    </mat-card>
+    }
+  </div>
+
+</div>

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 import {
 	Validators,
 	FormsModule,
@@ -15,8 +15,8 @@ import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 // import { AuthService } from "../../services/auth.service";
 
 @Component({
-	selector: "app-login",
-	standalone: true,
+  selector: 'app-sign-in',
+  standalone: true,
 	imports: [
 		FormsModule,
 		ReactiveFormsModule,
@@ -27,11 +27,11 @@ import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
 		MatDividerModule,
 		MatIconModule,
 	],
-	templateUrl: "./login.component.html",
-	styleUrl: "./login.component.scss",
+  templateUrl: './sign-in.component.html',
+  styleUrl: './sign-in.component.scss'
 })
-export class LoginComponent {
-	constructor(private fb: FormBuilder) {}
+export class SignInComponent {
+  constructor(private fb: FormBuilder) {}
 
 	signupForm = this.fb.group({
 		email: ["", [Validators.required, Validators.email]],

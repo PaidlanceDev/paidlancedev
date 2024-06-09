@@ -1,4 +1,4 @@
-<div class="signup">
+<div class="account-type">
   @if (!selectionMade && !paidlancerJoin && !clientJoin) {
   <div class="choose">
     <h1>Join as a paidlancer or a client:</h1>
@@ -27,7 +27,6 @@
       } @else {
       <button mat-raised-button disabled>Create an account</button>
       }
-      <p>Already have an account? <a [routerLink]="['/login']">Log In</a></p>
     </div>
   </div>
   }

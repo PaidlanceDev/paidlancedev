@@ -1,4 +1,4 @@
-.login {
+.signin {
   display: flex;
   justify-content: center;
 
@@ -32,6 +32,7 @@
           color: #333;
           display: flex;
           justify-content: center;
+          gap: 0.5rem;
           font-size: 1.1rem;
           font-weight: 400;
           width: 100%;
@@ -40,7 +41,6 @@
           mat-icon {
             height: 1.4rem;
             width: 1.4rem;
-            margin: 0 0 0 1.4rem;
 
             &:first-child {
               svg {
@@ -107,7 +107,7 @@
 
         &:not([disabled]) {
           background-color: #e0e0ff;
-          color: #fff;
+          color: #00006e;
         }
       }
 

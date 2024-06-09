@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JoinComponent } from './join.component';
+import { AccountTypeComponent } from './account-type.component';
 
-describe('JoinComponent', () => {
-  let component: JoinComponent;
-  let fixture: ComponentFixture<JoinComponent>;
+describe('AccountTypeComponent', () => {
+  let component: AccountTypeComponent;
+  let fixture: ComponentFixture<AccountTypeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JoinComponent]
+      imports: [AccountTypeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(JoinComponent);
+    fixture = TestBed.createComponent(AccountTypeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -15,7 +15,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @Component({
-  selector: 'app-join',
+  selector: 'app-account-type',
   standalone: true,
   imports: [
 		FormsModule,
@@ -36,10 +36,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 			useValue: { color: "primary" },
 		},
 	],
-  templateUrl: './join.component.html',
-  styleUrl: './join.component.scss'
+  templateUrl: './account-type.component.html',
+  styleUrl: './account-type.component.scss'
 })
-export class JoinComponent implements OnInit {
+export class AccountTypeComponent implements OnInit {
   selection: string = "";
   paidlancerJoin: boolean = false;
   clientJoin: boolean = false;

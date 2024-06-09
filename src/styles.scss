@@ -19,9 +19,10 @@ $teal-4: #d5ece8;
 $teal-5: #f5fbff;
 
 // Green palette
-$green-1: #2a8e43;
-$green-2: #417669;
-$green-3: #8cb9a8;
+$green-1: #2f7a51;
+$green-2: #2a8e43;
+$green-3: #417669;
+$green-4: #8cb9a8;
 $green-5: #f1fcf4;
 
 // Blue palette
@@ -90,15 +91,6 @@ body {
   }
 }
 
-app-login {
-
-  .mdc-button__label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.7rem;
-  }
-}
 
 mat-radio-button {
   width: 100%;

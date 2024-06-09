@@ -1,0 +1,78 @@
+<div class="public-profile">
+  @if (talent) {
+  <mat-card>
+    <mat-card-header>
+      <div class="title section">
+        <img mat-card-image src="{{talent.picture}}">
+        <div class="title-subtitle">
+          <mat-card-title>{{talent.firstName}} {{talent.lastName}}</mat-card-title>
+          <mat-card-subtitle><mat-icon>location_on</mat-icon>{{talent.location.city}},
+            {{talent.location.country}}</mat-card-subtitle>
+        </div>
+      </div>
+      <div class="share section">
+        <button mat-fab aria-label="chare icon button">
+          <mat-icon>share</mat-icon>
+        </button>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="sidenav">
+        <div class="heading section">
+          <div class="earnings stats">
+            <h2>$5K+</h2>
+            <p>Total earnings</p>
+          </div>
+          <div class="earnings stats">
+            <h2>34</h2>
+            <p>Total Jobs</p>
+          </div>
+          <div class="earnings stats">
+            <h2>104</h2>
+            <p>Total Hours</p>
+          </div>
+        </div>
+        <div class="availability section">
+          <h2>Hours per week</h2>
+          <p>Less than 30 hrs/week</p>
+          <p>Open to contract to hire</p>
+        </div>
+        <div class="languages section">
+          <h2>Languages</h2>
+          <p>English: Native or Bilingual</p>
+          <p>Spanish: Native or Bilingual</p>
+        </div>
+        <div class="verifications section">
+          <h2>Verifications</h2>
+          <p>Phone number: Verified<mat-icon>verified</mat-icon></p>
+          <p>ID: Verified<mat-icon>verified</mat-icon></p>
+        </div>
+      </div>
+      <div class="main">
+        <h2 class="section">{{talent.field}}</h2>
+        <div class="skills section">
+          <p>Top Skills</p>
+          @for (skill of talent.topSkills; track skill) {
+          <ul>
+            <li>{{skill.skillName}}</li>
+          </ul>
+          }
+        </div>
+        <div class="work-history section">
+          <h3>Work History</h3>
+          <div class="job">
+            <p>{{talent.field}} for a company</p>
+          </div>
+          <div class="job">
+            <p>{{talent.field}} for a company</p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-raised-button>Message</a>
+      <a mat-raised-button>Hire</a>
+    </mat-card-actions>
+  </mat-card>
+  }
+</div>
