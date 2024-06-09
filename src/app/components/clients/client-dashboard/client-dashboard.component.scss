@@ -1,0 +1,138 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &.is-mobile {
+    .header {
+      position: fixed;
+      z-index: 2;
+    }
+
+    mat-sidenav-container {
+      flex: 1 0 auto;
+    }
+  }
+
+  .header {
+    background-color: #7cbfb8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px 0 #0000001a;
+
+    .toolbar-row-start {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      mat-icon {
+        color: #fff;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 12rem;
+        }
+      }
+
+      nav {
+        a {
+          color: #fff;
+          font-size: 1.1rem;
+          font-weight: 600;
+          font-style: italic;
+          letter-spacing: 0.1rem;
+          margin: 0 0.5rem;
+        }
+      }
+    }
+
+    .search {
+      form {
+        min-width: 150px;
+        max-width: 500px;
+        width: 100%;
+
+        mat-form-field {
+          width: 100%;
+          position: relative;
+
+          mat-icon {
+            margin-left: 0.5rem;
+            cursor: pointer;
+          }
+
+          .trigger {
+            width: 7rem;
+            padding-right: 2.5rem;
+            margin-right: 0.5rem;
+
+            &::after {
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-top: 5px solid;
+              content: '';
+              height: 0;
+              position: absolute;
+              right: 16px;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+              width: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .toolbar-row-end {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 30%;
+      padding-right: 2rem;
+
+      .auth {
+        display: flex;
+        gap: 1rem;
+
+        a {
+
+          &[mat-raised-button] {
+            background-color: #e0e0ff;
+            color: #00006e;
+            box-shadow: #00000033 0px 3px 5px -1px, #00000024 0px 6px 10px 0px, #0000001f 0px 1px 18px 0px;
+          }
+        }
+      }
+    }
+  }
+
+  mat-sidenav-container {
+    flex: 1;
+
+    mat-sidenav {
+      width: auto;
+      border-radius: 0;
+      box-shadow: 0 2px 4px 0 #0000001a;
+
+      a[mat-list-item] {
+        padding-right: 2rem;
+      }
+    }
+
+    mat-sidenav-content{
+      padding: 1rem 2rem;
+    }
+  }
+}

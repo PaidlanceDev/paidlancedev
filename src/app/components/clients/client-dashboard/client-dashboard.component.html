@@ -1,1 +1,31 @@
-<p>client-dashboard works!</p>
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="header">
+    <div class="toolbar-row-start">
+      <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+      <a class="logo" routerLink="/" routerLinkActive="active">
+        <img src="branding/paidlancer-logo-long.png" alt="">
+      </a>
+    </div>
+    <div class="toolbar-row-end">
+      <div class="profile">
+        <!-- profile pic and stuff -->
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" opened="open">
+      <mat-nav-list>
+        @for (nav of navItems; track nav) {
+          <a mat-list-item routerLink="{{nav.route}}">{{nav.name}}</a>
+        }
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-footer></app-footer>
+</div>
