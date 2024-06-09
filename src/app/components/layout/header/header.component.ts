@@ -29,14 +29,7 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class HeaderComponent {
 	selectedItem: any;
-  private router = inject(Router);
+  loggedInUser: boolean = false;
 
-  handleClick($event: any) {
-    $event.stopPropagation();
-  }
 
-  select(item: any) {
-    this.selectedItem = item;
-    this.router.navigate([this.selectedItem.toLowerCase()]);
-  }
 }

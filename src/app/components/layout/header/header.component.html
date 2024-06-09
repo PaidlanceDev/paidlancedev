@@ -6,10 +6,21 @@
   </div>
 
   <div class="toolbar-row-end">
-    <div class="auth">
-      <a mat-raised-button routerLink="sign-in" routerLinkActive="active">Sign In</a>
-      <!-- <a mat-raised-button routerLink="join" routerLinkActive="active">Join</a> -->
-    </div>
+    @if (loggedInUser) {
+      <div class="profile">
+        <button mat-mini-fab [matMenuTriggerFor]="beforeMenu" aria-label="Example icon button with a profile image" >
+          <img src="images/profile.png" alt="">
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <a mat-menu-item routerLink="projects"><mat-icon>dashboard</mat-icon>Dashboard</a>
+          <a mat-menu-item><mat-icon>person</mat-icon>Profile</a>
+        </mat-menu>
+      </div>
+    } @else {
+        <div class="auth">
+        <a mat-raised-button routerLink="sign-in" routerLinkActive="active">Sign In</a>
+      </div>
+      }
   </div>
 
 </mat-toolbar>

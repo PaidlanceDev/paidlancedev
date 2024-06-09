@@ -5,6 +5,7 @@ import { FqaComponent } from "./components/pages/fqa/fqa.component";
 import { TermsOfServiceComponent } from "./components/pages/terms-of-service/terms-of-service.component";
 import { AccountTypeComponent } from "./components/auth/account-type/account-type.component";
 import { AllTalentComponent } from "./components/pages/all-talent/all-talent.component";
+import { AllProjectsComponent } from "./components/pages/all-projects/all-projects.component";
 import { TalentDisplayComponent } from "./components/pages/talent-display/talent-display.component";
 import { JobsListComponent } from "./components/pages/jobs-list/jobs-list.component";
 import { LayoutComponent } from "./components/layout/layout/layout.component";
@@ -26,6 +27,7 @@ export const routes: Routes = [
 			{ path: "account-type", component: AccountTypeComponent }, // TO-DO - protect this route
 			{ path: "all-talent", component: AllTalentComponent },
 			{ path: "all-talent/:talentUsername", component: TalentDisplayComponent },
+			{ path: "all-projects", component: AllProjectsComponent },
 			{ path: "jobs", component: JobsListComponent },
 			{ path: "fqa", component: FqaComponent },
 			{ path: "tos", component: TermsOfServiceComponent },

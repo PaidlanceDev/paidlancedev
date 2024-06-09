@@ -8,17 +8,23 @@
     </div>
     <div class="toolbar-row-end">
       <div class="profile">
-        <!-- profile pic and stuff -->
+        <button mat-mini-fab [matMenuTriggerFor]="beforeMenu" aria-label="Example icon button with a profile image" >
+          <img src="images/profile.png" alt="">
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <a mat-menu-item routerLink="projects"><mat-icon>dashboard</mat-icon>Dashboard</a>
+          <a mat-menu-item><mat-icon>person</mat-icon>Profile</a>
+        </mat-menu>
       </div>
     </div>
   </mat-toolbar>
 
   <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
-                [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" opened="open">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56" opened="open">
       <mat-nav-list>
         @for (nav of navItems; track nav) {
-          <a mat-list-item routerLink="{{nav.route}}">{{nav.name}}</a>
+        <a mat-list-item routerLink="{{nav.route}}">{{nav.name}}</a>
         }
       </mat-nav-list>
     </mat-sidenav>
