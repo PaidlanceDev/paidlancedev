@@ -1,11 +1,11 @@
 import { Component, Input, OnInit, inject } from "@angular/core";
-import { Talent } from "../../models/talent";
-import { TalentService } from "../../services/talent.service";
 
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatDividerModule } from "@angular/material/divider";
+import { Talent } from "../../../models/talent";
+import { TalentService } from "../../../services/talent.service";
 
 @Component({
 	selector: "app-talent-display",

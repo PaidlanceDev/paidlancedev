@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { FqaComponent } from './components/fqa/fqa.component';
-import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-service.component';
-import { AccountTypeComponent } from './components/account-type/account-type.component';
-import { TalentsListComponent } from './components/talents-list/talents-list.component';
-import { TalentDisplayComponent } from './components/talent-display/talent-display.component';
-import { JobsListComponent } from './components/jobs-list/jobs-list.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { SignInComponent } from './components/auth/sign-in/sign-in.component';
+import { FqaComponent } from './components/pages/fqa/fqa.component';
+import { TermsOfServiceComponent } from './components/pages/terms-of-service/terms-of-service.component';
+import { AccountTypeComponent } from './components/auth/account-type/account-type.component';
+import { TalentsListComponent } from './components/pages/talents-list/talents-list.component';
+import { TalentDisplayComponent } from './components/pages/talent-display/talent-display.component';
+import { JobsListComponent } from './components/pages/jobs-list/jobs-list.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },

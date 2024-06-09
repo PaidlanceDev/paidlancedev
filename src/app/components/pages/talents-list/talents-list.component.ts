@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from "@angular/core";
-import { TalentService } from "../../services/talent.service";
-import { Talent } from "../../models/talent";
+import { TalentService } from "../../../services/talent.service";
+import { Talent } from "../../../models/talent";
 import { RouterLink } from "@angular/router";
 
 import { MatCardModule } from "@angular/material/card";

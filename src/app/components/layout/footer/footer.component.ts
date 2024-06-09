@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { SocialComponent } from '../../partials/social/social.component';
+import { SocialComponent } from '../../../partials/social/social.component';
 
 @Component({
   selector: 'app-footer',
