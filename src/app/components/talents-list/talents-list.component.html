@@ -1,5 +1,44 @@
 <div class="talents">
-
+<div class="side-filter">
+  <mat-accordion multi>
+    <mat-expansion-panel expanded="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Field
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-chip-listbox aria-label="field selection">
+        @for (field of fields; track field) {
+          <mat-chip-option color="primary">{{field}}</mat-chip-option>
+        }
+      </mat-chip-listbox>
+    </mat-expansion-panel>
+    <mat-expansion-panel expanded="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Hourly Rate
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-chip-listbox aria-label="rate selection">
+        @for (rate of hourlyRate; track rate) {
+          <mat-chip-option color="primary">{{rate}}</mat-chip-option>
+        }
+      </mat-chip-listbox>
+    </mat-expansion-panel>
+    <mat-expansion-panel expanded="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Years Experience
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <mat-chip-listbox aria-label="field selection">
+        @for (years of yearsExperience; track years) {
+          <mat-chip-option color="primary">{{years}}</mat-chip-option>
+        }
+      </mat-chip-listbox>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
   <div class="cards-wrapper">
     @for (talent of talents; track talent.id) {
     <mat-card>

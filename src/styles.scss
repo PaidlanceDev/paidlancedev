@@ -51,7 +51,7 @@ body {
     font-size: 1rem;
   }
 
-  mat-label{
+  mat-label {
     font-family: "Lato", sans-serif;
   }
 
@@ -106,7 +106,6 @@ mat-radio-button {
   }
 }
 
-
 .mdc-radio {
   align-self: flex-end;
 }
@@ -118,12 +117,3 @@ mat-radio-button {
 .mdc-radio__inner-circle {
   border-color: #7cbfb8 !important;
 }
-
-app-login {
-  .mdc-button__label {
-    width: 85% !important;
-  }
-}
-
-
-

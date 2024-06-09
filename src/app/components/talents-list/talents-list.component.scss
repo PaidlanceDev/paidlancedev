@@ -3,8 +3,24 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  gap: 1rem;
+  gap: 1.5rem;
   margin: 1rem 0 2rem;
+
+  .side-filter {
+    width: 20vw;
+
+    mat-accordion {
+      mat-expansion-panel-header {
+        background-color: #f3f8f4;
+        height: 2.7rem;
+      }
+
+      mat-chip-listbox {
+        width: 70%;
+        margin: 0.5rem 0 0 1rem;
+      }
+    }
+  }
 
   .cards-wrapper {
     display: flex;

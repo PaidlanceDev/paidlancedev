@@ -6,13 +6,15 @@ import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-
 import { AccountTypeComponent } from './components/account-type/account-type.component';
 import { TalentsListComponent } from './components/talents-list/talents-list.component';
 import { TalentDisplayComponent } from './components/talent-display/talent-display.component';
+import { JobsListComponent } from './components/jobs-list/jobs-list.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'account-type', component: AccountTypeComponent }, // TO-DO - protect this route
-  { path: 'talents', component: TalentsListComponent },
+  { path: 'talent', component: TalentsListComponent },
   { path: 'talent/:talentUsername', component: TalentDisplayComponent},
+  { path: 'jobs', component: JobsListComponent },
   { path: 'fqa', component: FqaComponent },
   { path: 'tos', component: TermsOfServiceComponent },
   { path: '**', redirectTo: '', pathMatch: 'full'},
