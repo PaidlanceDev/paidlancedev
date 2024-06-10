@@ -1,5 +1,5 @@
 import { MediaMatcher } from "@angular/cdk/layout";
-import { ChangeDetectorRef, Component, OnDestroy } from "@angular/core";
+import { ChangeDetectorRef, Component, inject, OnDestroy } from "@angular/core";
 import { FooterComponent } from "../footer/footer.component";
 import { RouterLink, RouterOutlet } from "@angular/router";
 
@@ -9,6 +9,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MatListModule } from "@angular/material/list";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { User } from "@supabase/supabase-js";
+import { AuthService } from "../../../services/auth.service";
 
 
 @Component({
@@ -30,6 +32,8 @@ import { MatIconModule } from "@angular/material/icon";
 })
 export class DashboardComponent implements OnDestroy {
 	mobileQuery: MediaQueryList;
+  user: User | null = null;
+  authService = inject(AuthService);
 
 	navItems = [
     { name: "Projects", route: "projects" },
@@ -40,16 +44,6 @@ export class DashboardComponent implements OnDestroy {
     { name: "Settings", route: "settings" },
   ];
 
-	fillerContent = Array.from(
-		{ length: 5 },
-		() =>
-			`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
-	);
-
 	private _mobileQueryListener: () => void;
 
 	constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
@@ -57,6 +51,10 @@ export class DashboardComponent implements OnDestroy {
 		this._mobileQueryListener = () => changeDetectorRef.detectChanges();
 		this.mobileQuery.addListener(this._mobileQueryListener);
 	}
+
+  onLogout() {
+    this.authService.signOut();
+  }
 
 	ngOnDestroy(): void {
 		this.mobileQuery.removeListener(this._mobileQueryListener);

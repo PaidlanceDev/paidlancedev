@@ -38,6 +38,7 @@ export class AuthService {
 
   async signOut() {
     await this.supabase.auth.signOut();
+    this.router.navigate(['/']);
   }
 
   get currentUser() {

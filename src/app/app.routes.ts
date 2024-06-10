@@ -7,7 +7,6 @@ import { AccountTypeComponent } from "./components/auth/account-type/account-typ
 import { AllTalentComponent } from "./components/pages/all-talent/all-talent.component";
 import { AllProjectsComponent } from "./components/pages/all-projects/all-projects.component";
 import { TalentDisplayComponent } from "./components/pages/talent-display/talent-display.component";
-import { JobsListComponent } from "./components/pages/jobs-list/jobs-list.component";
 import { LayoutComponent } from "./components/layout/layout/layout.component";
 import { DashboardComponent } from "./components/layout/dashboard/dashboard.component";
 import { ClientNewProjectComponent } from "./components/clients/client-new-project/client-new-project.component";
@@ -28,7 +27,6 @@ export const routes: Routes = [
 			{ path: "all-talent", component: AllTalentComponent },
 			{ path: "all-talent/:talentUsername", component: TalentDisplayComponent },
 			{ path: "all-projects", component: AllProjectsComponent },
-			{ path: "jobs", component: JobsListComponent },
 			{ path: "fqa", component: FqaComponent },
 			{ path: "tos", component: TermsOfServiceComponent },
 		],
