@@ -45,6 +45,16 @@ export class HeaderComponent {
     });
   }
 
+  ngOnChanges() {
+    this.authService.currentUser.subscribe((user) => {
+      if (user) {
+        this.user = user;
+      } else {
+        this.user = null;
+      }
+    });
+  }
+
   onLogout() {
     this.authService.signOut();
   }
