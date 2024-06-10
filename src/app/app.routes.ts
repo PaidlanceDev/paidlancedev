@@ -51,6 +51,5 @@ export const routes: Routes = [
 			{ path: "matches", component: TalentMatchesComponent },
 		],
 	},
-
 	{ path: "**", redirectTo: "", pathMatch: "full" },
 ];

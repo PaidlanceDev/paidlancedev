@@ -1,26 +1,28 @@
 <mat-toolbar class="header">
   <div class="toolbar-row-start">
+    @if (showMenu) {
+      <button mat-icon-button (click)="sidenavRef.toggle()"><mat-icon>menu</mat-icon></button>
+    }
     <a class="logo" routerLink="/">
       <img src="branding/paidlancer-logo-long.png" alt="">
     </a>
   </div>
-
   <div class="toolbar-row-end">
     @if (!user) {
-      <div class="auth">
-        <a mat-raised-button routerLink="sign-in">Sign In</a>
-      </div>
+    <div class="auth">
+      <a mat-raised-button routerLink="sign-in">Sign In</a>
+    </div>
     } @else {
-      <div class="profile">
-        <button mat-mini-fab [matMenuTriggerFor]="beforeMenu" aria-label="Example icon button with a profile image">
-          <img src="images/profile.png" alt="">
-        </button>
-        <mat-menu #beforeMenu="matMenu" xPosition="before">
-          <a mat-menu-item routerLink="projects"><mat-icon>dashboard</mat-icon>Dashboard</a>
-          <a mat-menu-item><mat-icon>person</mat-icon>Profile</a>
-          <button mat-menu-item (click)="onLogout()"><mat-icon>logout</mat-icon>Logout</button>
-        </mat-menu>
-      </div>
+    <div class="profile">
+      <button mat-mini-fab [matMenuTriggerFor]="beforeMenu" aria-label="Example icon button with a profile image">
+        <img src="images/profile.png" alt="">
+      </button>
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <a mat-menu-item routerLink="projects"><mat-icon>dashboard</mat-icon>Dashboard</a>
+        <a mat-menu-item><mat-icon>person</mat-icon>Profile</a>
+        <button mat-menu-item (click)="onLogout()"><mat-icon>logout</mat-icon>Logout</button>
+      </mat-menu>
+    </div>
     }
   </div>
 

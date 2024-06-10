@@ -32,7 +32,7 @@ import { AuthService } from '../../../services/auth.service';
   styleUrl: './sign-in.component.scss'
 })
 export class SignInComponent {
-  authService = inject(AuthService);
+  private authService = inject(AuthService);
 
   constructor(private fb: FormBuilder) {}
 

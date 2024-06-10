@@ -11,6 +11,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { User } from "@supabase/supabase-js";
 import { AuthService } from "../../../services/auth.service";
+import { HeaderComponent } from "../header/header.component";
 
 
 @Component({
@@ -19,6 +20,7 @@ import { AuthService } from "../../../services/auth.service";
 	imports: [
     RouterLink,
     RouterOutlet,
+    HeaderComponent,
 		FooterComponent,
 		MatToolbarModule,
     MatMenuModule,
@@ -33,7 +35,7 @@ import { AuthService } from "../../../services/auth.service";
 export class DashboardComponent implements OnDestroy {
 	mobileQuery: MediaQueryList;
   user: User | null = null;
-  authService = inject(AuthService);
+  private authService = inject(AuthService);
 
 	navItems = [
     { name: "Projects", route: "projects" },
