@@ -24,10 +24,9 @@ export class AuthService {
 				console.log(session);
 				if (session && session.user) {
 					this.user.next(session.user);
-          this.router.navigate(['/client']);
+
 				} else {
-					this.user.next(null);
-          this.router.navigate(['/home']);
+					console.log("No user session found");
 				}
 			}
 		);
