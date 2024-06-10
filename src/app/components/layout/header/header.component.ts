@@ -65,7 +65,7 @@ export class HeaderComponent implements OnDestroy {
           const routePath = currentRoute.snapshot.routeConfig?.path;
           if (routePath === '') {
             this.showMenu = false;
-          } else if (routePath?.startsWith('client') || routePath?.startsWith('talent')) {
+          } else if (routePath?.includes('client') || routePath?.includes('talent')) {
             this.showMenu = true;
           }
         }
