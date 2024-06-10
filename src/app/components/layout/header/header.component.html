@@ -6,9 +6,13 @@
   </div>
 
   <div class="toolbar-row-end">
-    @if (user) {
+    @if (!user) {
+      <div class="auth">
+        <a mat-raised-button routerLink="sign-in">Sign In</a>
+      </div>
+    } @else {
       <div class="profile">
-        <button mat-mini-fab [matMenuTriggerFor]="beforeMenu" aria-label="Example icon button with a profile image" >
+        <button mat-mini-fab [matMenuTriggerFor]="beforeMenu" aria-label="Example icon button with a profile image">
           <img src="images/profile.png" alt="">
         </button>
         <mat-menu #beforeMenu="matMenu" xPosition="before">
@@ -17,11 +21,7 @@
           <button mat-menu-item (click)="onLogout()"><mat-icon>logout</mat-icon>Logout</button>
         </mat-menu>
       </div>
-    } @else {
-        <div class="auth">
-        <a mat-raised-button routerLink="sign-in">Sign In</a>
-      </div>
-      }
+    }
   </div>
 
 </mat-toolbar>
