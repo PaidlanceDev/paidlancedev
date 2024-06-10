@@ -45,4 +45,4 @@ Thumbs.db
 .netlify
 
 # Local environment variables
-/src/environments
+src/environments
