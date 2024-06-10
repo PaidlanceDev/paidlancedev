@@ -47,6 +47,14 @@ export class DashboardComponent implements OnDestroy {
 	private _mobileQueryListener: () => void;
 
 	constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+    this.authService.currentUser.subscribe((user) => {
+      if (user) {
+        this.user = user;
+        console.log("User:", this.user);
+      } else {
+        this.user = null;
+      }
+    });
 		this.mobileQuery = media.matchMedia("(max-width: 600px)");
 		this._mobileQueryListener = () => changeDetectorRef.detectChanges();
 		this.mobileQuery.addListener(this._mobileQueryListener);
