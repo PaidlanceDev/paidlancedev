@@ -1,0 +1,42 @@
+{
+  "version": "3",
+  "remote": {
+    "https://edge.netlify.com/": "ff84a16f192fdb43db8b9dff869889f555c05857d075044d2a7cfa54c283a0a0",
+    "https://edge.netlify.com/bootstrap/config.ts": "0aa0a225d978b89e0e62cbd853701605199e7a84095e55eeb70147faf1a24803",
+    "https://edge.netlify.com/bootstrap/context.ts": "8f99269eeeeccf9b852e6089cc648c962a0ea20b2198b8b38b38e3b2ce2b9143",
+    "https://edge.netlify.com/bootstrap/cookie.ts": "8b0baae708989ca183c6f3b4ab3d029e6abcbc2e43f93edeb0ff447b3bbc3a05",
+    "https://edge.netlify.com/bootstrap/edge_function.ts": "b8253e86aa83c67341f5cfedeba5049d77fbf84dcab7eceff7566b7728ae9b39",
+    "https://edge.netlify.com/bootstrap/globals.ts": "38f9e0be6c2c78206bf14d2387d41964d38bbe81644b3668e203c6f6473408a7"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@angular-devkit/build-angular@^18.0.3",
+        "npm:@angular/animations@^18.0.0",
+        "npm:@angular/cdk@^18.0.0",
+        "npm:@angular/cli@^18.0.3",
+        "npm:@angular/common@^18.0.0",
+        "npm:@angular/compiler-cli@^18.0.0",
+        "npm:@angular/compiler@^18.0.0",
+        "npm:@angular/core@^18.0.0",
+        "npm:@angular/forms@^18.0.0",
+        "npm:@angular/material@^18.0.0",
+        "npm:@angular/platform-browser-dynamic@^18.0.0",
+        "npm:@angular/platform-browser@^18.0.0",
+        "npm:@angular/router@^18.0.0",
+        "npm:@supabase/supabase-js@^2.43.4",
+        "npm:@types/jasmine@~5.1.0",
+        "npm:jasmine-core@~5.1.0",
+        "npm:karma-chrome-launcher@~3.2.0",
+        "npm:karma-coverage@~2.2.0",
+        "npm:karma-jasmine-html-reporter@~2.1.0",
+        "npm:karma-jasmine@~5.1.0",
+        "npm:karma@~6.4.0",
+        "npm:rxjs@~7.8.0",
+        "npm:tslib@^2.3.0",
+        "npm:typescript@~5.4.2",
+        "npm:zone.js@~0.14.3"
+      ]
+    }
+  }
+}

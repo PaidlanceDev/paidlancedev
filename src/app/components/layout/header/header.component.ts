@@ -8,6 +8,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import {MatIconModule} from '@angular/material/icon';
+import { AuthService } from "../../../services/auth.service";
+import { User } from "@supabase/supabase-js";
 
 
 @Component({
@@ -29,7 +31,21 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class HeaderComponent {
 	selectedItem: any;
-  loggedInUser: boolean = false;
+  user: User | null = null;
+  authService = inject(AuthService);
 
+  constructor() {
+    this.authService.currentUser.subscribe((user) => {
+      if (user) {
+        this.user = user;
+        console.log("User:", this.user);
+      } else {
+        this.user = null;
+      }
+    });
+  }
 
+  onLogout() {
+    this.authService.signOut();
+  }
 }

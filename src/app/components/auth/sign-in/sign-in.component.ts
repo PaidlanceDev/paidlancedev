@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
 	Validators,
 	FormsModule,
@@ -12,6 +12,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
 import { MatDividerModule } from "@angular/material/divider";
 import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
+import { AuthService } from '../../../services/auth.service';
 // import { AuthService } from "../../services/auth.service";
 
 @Component({
@@ -31,6 +32,8 @@ import { MatIconModule, MatIconRegistry } from "@angular/material/icon";
   styleUrl: './sign-in.component.scss'
 })
 export class SignInComponent {
+  authService = inject(AuthService);
+
   constructor(private fb: FormBuilder) {}
 
 	signupForm = this.fb.group({
@@ -40,7 +43,7 @@ export class SignInComponent {
 	email = this.signupForm.get("email");
 
 	async onGithubSignIn() {
-		// await this.authService.signInWithGithub();
+		await this.authService.signInWithGithub();
 	}
 
 	async onGoogleSignIn() {
