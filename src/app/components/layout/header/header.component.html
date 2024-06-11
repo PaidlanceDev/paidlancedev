@@ -15,7 +15,7 @@
         <img src="images/profile.png" alt="">
       </button>
       <mat-menu #beforeMenu="matMenu" xPosition="before">
-        <a mat-menu-item routerLink="projects"><mat-icon>dashboard</mat-icon>Dashboard</a>
+        <a mat-menu-item [routerLink]="['/',userRole,'projects']"><mat-icon>dashboard</mat-icon>Dashboard</a>
         <a mat-menu-item><mat-icon>person</mat-icon>Profile</a>
         <button mat-menu-item (click)="onLogout()"><mat-icon>logout</mat-icon>Logout</button>
       </mat-menu>

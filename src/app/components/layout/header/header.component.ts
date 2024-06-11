@@ -34,6 +34,7 @@ export class HeaderComponent {
 
 	selectedItem: any;
   user: User | null = null;
+  userRole: string | null = null;
   private authService = inject(AuthService);
 
   constructor() {
@@ -43,6 +44,11 @@ export class HeaderComponent {
         console.log("User:", this.user);
       } else {
         this.user = null;
+      }
+    });
+    this.authService.userRole.subscribe((role) => {
+      if (role) {
+        this.userRole = role;
       }
     });
   }

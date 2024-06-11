@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
 export class AuthService {
   private supabase!: SupabaseClient;
   user = new BehaviorSubject<User | null>(null);
-  userRole!: string;
+  userRole = new BehaviorSubject<string | null>(null);
   router = inject(Router);
 
   constructor() {
@@ -41,15 +41,19 @@ export class AuthService {
         console.error("user ID not found.");
         return null;
       }
-
       const { data, error } = await this.supabase
         .from("users")
-        .delete()
-        .eq("id", id);
+        .select("role")
       if (error) {
         console.error(error);
       } else {
-        console.log(data);
+        if (data) {
+          this.router.navigate([data[0].role]);
+          this.userRole.next(data[0].role);
+          console.log("User Role:", this.userRole);
+        } else {
+          this.router.navigate(['account-type']);
+        }
       }
       return data;
     } catch (error: any) {
@@ -69,6 +73,10 @@ export class AuthService {
 
   get currentUser() {
     return this.user.asObservable();
+  }
+
+  get currentUserRole() {
+    return this.userRole.asObservable();
   }
 
   getCurrentUser(): Observable<User | null> {
