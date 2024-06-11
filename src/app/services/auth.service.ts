@@ -10,6 +10,7 @@ import { environment } from '../../environments/environment';
 export class AuthService {
   private supabase!: SupabaseClient;
   user = new BehaviorSubject<User | null>(null);
+  userRole!: string;
   router = inject(Router);
 
   constructor() {
@@ -24,12 +25,37 @@ export class AuthService {
 				console.log(session);
 				if (session && session.user) {
 					this.user.next(session.user);
+          this.getUserRole(session.user.id as string);
 				} else {
 					this.user.next(null);
           this.router.navigate(['/']);
 				}
 			}
 		);
+	}
+
+  	// Role
+	async getUserRole(id: string) {
+    try {
+      if (!id) {
+        console.error("user ID not found.");
+        return null;
+      }
+
+      const { data, error } = await this.supabase
+        .from("users")
+        .delete()
+        .eq("id", id);
+      if (error) {
+        console.error(error);
+      } else {
+        console.log(data);
+      }
+      return data;
+    } catch (error: any) {
+      console.error(error);
+      return null;
+    }
 	}
 
   async signInWithGithub() {
