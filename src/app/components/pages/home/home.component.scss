@@ -147,22 +147,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 75vh;
     padding: 2rem;
 
     mat-card {
       background-color: #f1fcf4;
       align-items: center;
-      padding: 3rem 0 2rem;
+      padding: 3rem 2rem 2rem;
       margin: 3rem;
-      width: 50vw;
+      width: 30vw;
 
       h3 {
         color: #2f7a51;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: bold;
         line-height: 2rem;
         text-align: center;
-        width: 35vw;
+        width: 100%;
       }
 
       .actions {

@@ -69,7 +69,11 @@
       <h3>Embark on your journey with Paidlancer today and discover a realm where paidlancers flourish and clients
         prosper!</h3>
       <div class="actions">
-        <button mat-raised-button class="join" routerLink="/sign-in">Join Now</button>
+        @if (user) {
+          <button mat-raised-button class="join">Profile</button>
+        } @else {
+          <button mat-raised-button class="join" routerLink="/sign-in">Join Now</button>
+        }
       </div>
     </mat-card>
   </div>
