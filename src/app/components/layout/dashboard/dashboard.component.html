@@ -1,5 +1,31 @@
 <div class="container" [class.is-mobile]="mobileQuery.matches">
-  <app-header [sidenavRef]="snav"></app-header>
+  <mat-toolbar class="header">
+    <div class="toolbar-row-start">
+      <a class="logo" routerLink="/">
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <img src="branding/paidlance-logo-long.png" alt="">
+        <p>.dev</p>
+      </a>
+    </div>
+    <div class="toolbar-row-end">
+      @if (!user) {
+      <div class="auth">
+        <a mat-raised-button routerLink="sign-in">Sign In</a>
+      </div>
+      } @else {
+      <div class="profile">
+        <button mat-mini-fab [matMenuTriggerFor]="beforeMenu" aria-label="Example icon button with a profile image">
+          <img src="images/profile.png" alt="">
+        </button>
+        <mat-menu #beforeMenu="matMenu" xPosition="before">
+          <a mat-menu-item [routerLink]="['/', userRole,'projects']"><mat-icon>dashboard</mat-icon>Dashboard</a>
+          <a mat-menu-item><mat-icon>person</mat-icon>Profile</a>
+          <button mat-menu-item (click)="onLogout()"><mat-icon>logout</mat-icon>Logout</button>
+        </mat-menu>
+      </div>
+      }
+    </div>
+  </mat-toolbar>
 
   <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"

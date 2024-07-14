@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "paidlancer": {
+    "paidlancedev": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -70,10 +70,10 @@
           "builder": "@ngx-env/builder:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "paidlancer:build:production"
+              "buildTarget": "paidlancedev:build:production"
             },
             "development": {
-              "buildTarget": "paidlancer:build:development"
+              "buildTarget": "paidlancedev:build:development"
             }
           },
           "defaultConfiguration": "development"

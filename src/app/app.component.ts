@@ -13,7 +13,7 @@ import { User } from '@supabase/supabase-js';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title = 'paidlancer';
+  title = 'paidlancedev';
   user: User | null = null;
   authService = inject(AuthService);
 

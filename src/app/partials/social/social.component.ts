@@ -13,19 +13,19 @@ import { MatIconModule } from '@angular/material/icon';
 export class SocialComponent {
   socialLinks = [
     {
-      url: 'https://github.com/PaidlancerDev',
+      url: 'https://github.com/PaidlanceDev',
       icon: 'github'
     },
     {
-      url: 'https://www.linkedin.com/company/paidlancerdev',
+      url: 'https://www.linkedin.com/company/paidlancedev',
       icon: 'linkedin'
     },
     {
-      url: 'https://twitter.com/PaidlancerDev',
+      url: 'https://twitter.com/PaidlanceDev',
       icon: 'twitter'
     },
     {
-      url: 'https://www.youtube.com/@PaidlancerDev',
+      url: 'https://www.youtube.com/@PaidlanceDev',
       icon: 'youtube'
     }
   ];

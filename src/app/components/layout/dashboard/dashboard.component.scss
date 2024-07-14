@@ -36,12 +36,23 @@
       }
 
       .logo {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        min-height: 1rem;
 
         img {
           width: 12rem;
+          padding-right: 1.3rem;
+        }
+
+        p {
+          position: absolute;
+          right: 0;
+          bottom: 0.75rem;
+          color: #fff;
+          margin: 0;
         }
       }
     }

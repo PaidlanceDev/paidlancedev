@@ -35,6 +35,7 @@ import { HeaderComponent } from "../header/header.component";
 export class DashboardComponent implements OnDestroy {
 	mobileQuery: MediaQueryList;
   user: User | null = null;
+  userRole: string | null = null;
   private authService = inject(AuthService);
 
 	navItems = [

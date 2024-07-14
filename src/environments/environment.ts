@@ -1,8 +1,8 @@
 export const environment = {
   production: true,
-  appname: 'Paidlancer',
+  appname: 'PaidlanceDev',
   supabase: {
-    url: process.env['NG_APP_SUPABASE_URL'] || "",
-    key: process.env['NG_APP_SUPABASE_API_KEY'] || ""
+    url: 'https://rerozlyheuykauquinbz.supabase.co',
+    key: 'NG_APP_SUPABASE_API_KEY'
   }
 };

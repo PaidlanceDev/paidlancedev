@@ -1,5 +1,5 @@
 {
-  "name": "paidlancer",
+  "name": "paidlancedev",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -23,6 +23,7 @@
     "@angular/router": "^18.0.0",
     "@ngx-env/builder": "^18.0.1",
     "@supabase/supabase-js": "^2.43.4",
+    "netlify-cli": "^17.33.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

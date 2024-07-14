@@ -1,5 +1,5 @@
 name: 🐛 Bug report
-description: Create a bug report to help us improve Paidlancer
+description: Create a bug report to help us improve PaidlanceDev
 title: "Bug: "
 labels: [👀 needs triage, 🐛 bug]
 body:
@@ -48,5 +48,5 @@ body:
       label: I would be willing to submit a PR to fix this issue
       description: Assistance is provided if you need help submitting a pull request
       options:
-        - label: "Yes and I have read the [Contribution Guide](https://github.com/PaidlancerDev/paidlancer-app/blob/main/CONTRIBUTING.md) and I agree to follow this project's [Code of Conduct](https://github.com/PaidlancerDev/paidlancer-app/blob/main/CODE_OF_CONDUCT.md)"
+        - label: "Yes and I have read the [Contribution Guide](https://github.com/PaidlanceDev/paidlancedev/blob/main/CONTRIBUTING.md) and I agree to follow this project's [Code of Conduct](https://github.com/PaidlanceDev/paidlancedev/blob/main/CODE_OF_CONDUCT.md)"
         - label: 'No'

@@ -1,4 +1,4 @@
-# Contributing to Paidlancer
+# Contributing to PaidlanceDev
 
 First off, thanks for taking the time to contribute! ❤️
 
@@ -75,13 +75,13 @@ Even if the issue is labeled as not implemented, it remains your responsibility 
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [Paidlancer](https://github.com/PaidlancerDev/paidlancer-app) for an open or closed PR that relates to your submission.
+1. Search [PaidlanceDev](https://github.com/PaidlanceDev/paidlancedev) for an open or closed PR that relates to your submission.
    You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add.
    Discussing the design upfront helps to ensure that we're ready to accept your work.
 
-3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `paidlancer-app` repo.
+3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the `paidlancedev` repo.
 
 4. In your forked repository, make your changes in a new git branch:
 
@@ -110,7 +110,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
    git push origin my-fix-branch
    ```
 
-10. In GitHub, send a pull request to `PaidlancerDev/paidlancer-app:main`.
+10. In GitHub, send a pull request to `PaidlanceDev/paidlancedev:main`.
 
 **DO NOT** erase the provided PR template! It is intended for you to use, not to replace it with random text.
 
